@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UFT-8"
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>Formulario de Registro</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Datos Principales</h2>
+            </section>
+            <!-- form: sirve como envoltura para los elementos input -->
+            <form>
+                <label for="nombres">Nombres:</label>
+                <input 
+                type="text"
+                placeholder="ingresa tus nombres"
+                id="nombres"
+                minlength="2"
+                >
+                <br>
+                <label for="apellidos">Apellidos</label>
+                <input 
+                type="text"
+                placeholder="Ej. Perez Luna"
+                id="apellidos"
+                required
+                maxlength="15"
+                >
+                <br>
+                <label>email:</label>
+                    <input
+                        type="email"
+                        placeholder="ingrese su correo"
+                    >
+                <br>
+                <label for="contraseña">
+                    contraseña:
+                </label>
+                <input
+                        type="password"
+                        placeholder="Ingrese una contraseña segura"
+                        id="contrasena"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                >
+                <br>
+                <label for="edad">
+                    edad:
+                </label>
+                <input
+                        type="number"
+                        placeholder="Ingresa tu edad"
+                        id="edad"
+                        min="1"
+                        max="140"
+                >
+                <!--  -->
+                <br>
+                <label>Género</label>
+                <br>
+                <input
+                    type="radio"
+                    id="rmasculino"
+                    name="genero"
+                    value="M"
+                >
+                <label for="rmasculino">Masculino</label>
+                <br>
+                <input 
+                     type="radio"
+                     id="rfemenino"
+                     name="genero"
+                     value="F"
+                >
+                <label for="rfemenino">Femenino</label>
+                <br>
+                <input
+                     type="radio"
+                     id="nc"
+                     name="genero"
+                     value="NC"
+                >
+                <label for="nc">No Compartir</label>
+                <!--  -->
+                <br>
+                <label>Hobbies</label>
+                <br>
+                <input
+                     type="checkbox"
+                     value="musica"
+                     id="ch_musica"
+                ><label for="ch_musica">Escuchar música</label>
+                <input
+                     type="checkbox"
+                     value="memes"
+                     disabled
+                > Ver memes
+                <input
+                     type="checkbox"
+                     value="jugar basket"
+                >Jugar basket
+                <input
+                    type="checkbox"
+                    value="natacion"
+                >Natación
+                <!--  -->
+                <br>
+                <label>Ciudad</label>
+                <br>
+                <select>
+                    <option
+                        selected
+                        disabled
+                    >
+                       Selecciona una opción    
+                </option>
+                    <option value="AM">
+                         Amazonas
+                    </option>
+                    <option value="CU">
+                        Cusco
+                    </option> 
+                    <option value="AR">
+                        Arequipa
+                    </option>
+                    <option value="HU">
+                        Huánuco
+                    </option> 
+                    <option value="LA">
+                        Lambayeque
+                   </option>
+                </select>
+                <!-- una fuente de datos  -->
+                <br>
+                <label>Distritos</label>
+                <br>
+                <input list="distritos">
+                <datalist id="distritos">
+                    <option value="Lima">
+                        Lima
+                    </option>
+                    <option value="Jesus Maria">
+                        Distrito Jesús Maria
+                    </option>
+                    <option value="Lince">
+                        Lince
+                    </option>
+                </datalist>
+                <br>
+                <label>Fecha de nacimiento</label>
+                <input type="date">
+                <br>
+                <label>Color favorito</label>
+                <input type="color">
+                <hr>
+                <input type="reset" value="Limpiar formulario">
+                <input type="submit" value="Enviar datos">
+            </form>
+        </main>
+    </body>
+</html>
